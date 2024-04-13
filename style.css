@@ -1,0 +1,171 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-around; 
+   background-color: #eee;
+   min-width: 100%;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-link li{
+    list-style: none;
+    padding: 10px;
+}
+.nav-link li:hover{
+    background-color: #504e4e;
+    cursor: pointer;
+}
+.nav-link li a{
+    text-decoration: none;
+    color: #000;
+}
+.hamburger{
+    position: absolute;
+    display: none;
+}
+
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home div:nth-child(1) {
+    padding: 10em;
+}
+#home div:nth-child(2) {
+    padding: 5em;
+}
+#home img{
+    width: auto;
+    max-width: 500px;
+}
+#home button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    background: #eee;
+    border-radius: 30px;
+}
+#home button:hover{
+    background-color: #d87d7d;
+    color: #fff;
+}
+
+#about{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#about .about-header{
+    width: 50%;
+}
+#about .cards-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+}
+#about .cards-list .card{
+    text-align: center;
+    padding: 30px;
+}
+#about .cards-list .card img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #eee;
+}
+#contact a{
+    text-decoration: none;
+    color: #000;
+}
+#contact a:hover{
+    color: rgb(255, 162, 0);
+}
+#contact .sm-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contact .sm-contact a{
+    padding: 10px;
+}
+
+
+@media (max-width:720px) {
+    nav{
+        width: 100%;
+    }
+    .hamburger{
+        display: inline;
+        left: 80%;
+    }
+    .nav-link{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-link.active{
+        display: flex;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #504e4e;
+        color: #fff;
+        padding: 0px;
+    }
+
+
+
+    #home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    #home div:nth-child(1){
+        width: 100%;
+        text-align: center;
+        padding: 0px !important;
+    }
+    #home img{
+        width: 80%;
+    }
+
+    #about .cards-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1090px) {
+    #home div:nth-child(1) {
+        padding: 0px 0px 0px 100px;
+    }
+}
